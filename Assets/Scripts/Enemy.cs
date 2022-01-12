@@ -25,27 +25,20 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // WIP, right now it crashes the game
-
-        /*if (moveBackAndForth)
+        
+        if (moveBackAndForth)
         {
-            if (directionFacing == 1)
+            if (transform.position.x >= pos2)
             {
-                while (transform.position.x <= pos2)
-                {
-                    enemyRigidbody.velocity = new Vector2(movementSpeed, enemyRigidbody.velocity.y);
-                }
                 directionFacing = -1;
             }
-            else if (directionFacing == -1)
+            else if (transform.position.x <= pos1)
             {
-                while (transform.position.x >= pos1)
-                {
-                    enemyRigidbody.velocity = new Vector2(-movementSpeed, enemyRigidbody.velocity.y);
-                }
                 directionFacing = 1;
             }
-
-        }*/
+            transform.localScale = new Vector3(directionFacing, 1, 1);
+            enemyRigidbody.velocity = new Vector2(directionFacing * movementSpeed, enemyRigidbody.velocity.y);
+        }
+        
     }
 }

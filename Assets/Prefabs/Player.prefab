@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3937482093302261320}
   - component: {fileID: 3937482093302261333}
   - component: {fileID: 3937482093302261334}
+  - component: {fileID: 1761443573118303932}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -69,8 +70,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.001275003}
-  m_Size: {x: 0.5, y: 1.30255}
+  m_Offset: {x: 0, y: 0.04763204}
+  m_Size: {x: 0.5, y: 1.2047359}
   m_Direction: 0
 --- !u!61 &3937482093302261333
 BoxCollider2D:
@@ -96,7 +97,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.079865575}
+  m_Size: {x: 0.2, y: 0.079865575}
   m_EdgeRadius: 0
 --- !u!114 &3937482093302261334
 MonoBehaviour:
@@ -111,11 +112,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inRunningMode: 0
+  health: 3
+  currentCheckpoint: {fileID: 0}
+  waitTimeForRespawn: 1
+  deathParticles: {fileID: 8079114010986094265, guid: 17d41555dd9f7fd46a0be3c8c348c75a, type: 3}
   runningMovementSpeed: 10
   exploringMovementSpeed: 10
   jumpSpeed: 25
   runToExploreWaitTime: 3
   exploreToRunWaitTime: 1
+--- !u!95 &1761443573118303932
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3937482093302261322}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f7156aba6371364c90970b63daa5ca3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3937482094181912162
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,7 +209,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2001593001
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4436e8c459c32e04d8dc48d6a71b641a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

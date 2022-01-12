@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Checkpoint
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -13,8 +15,8 @@ TagManager:
   - UI
   - Player
   - Enemy
-  - 
-  - 
+  - Camera Barriers
+  - Checkpoint
   - 
   - 
   - 
@@ -40,6 +42,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Checkpoint
+    uniqueID: 3780453517
     locked: 0
   - name: Ground
     uniqueID: 2839673849
