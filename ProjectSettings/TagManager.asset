@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Checkpoint
   - Enemy
-  - GameMusic
+  - Endpoint
   layers:
   - Default
   - TransparentFX

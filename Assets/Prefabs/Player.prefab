@@ -116,11 +116,12 @@ MonoBehaviour:
   currentCheckpoint: {fileID: 0}
   waitTimeForRespawn: 1
   deathParticles: {fileID: 8079114010986094265, guid: 17d41555dd9f7fd46a0be3c8c348c75a, type: 3}
+  gameJustStarted: 1
   runningMovementSpeed: 10
   exploringMovementSpeed: 10
   jumpSpeed: 25
   runToExploreWaitTime: 3
-  exploreToRunWaitTime: 1
+  exploreToRunWaitTime: 3
 --- !u!95 &1761443573118303932
 Animator:
   serializedVersion: 3

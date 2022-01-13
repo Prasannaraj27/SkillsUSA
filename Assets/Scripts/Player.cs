@@ -19,6 +19,9 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject deathParticles;
     bool canSwitchMode;
 
+    bool playerWon = false;
+    public bool gameJustStarted = true;
+
     // Variables that can be changed outside of the code
     [SerializeField] float runningMovementSpeed = 10;
     [SerializeField] float exploringMovementSpeed = 5;
@@ -41,7 +44,9 @@ public class Player : MonoBehaviour
     {
         if (health < 0) { health = 0; }
 
-        if (knockedOut) { return; }
+        if (knockedOut || isDead() || playerWon || FindObjectOfType<PauseScreen>().IsGamePaused()) { return; }
+
+        if (inRunningMode) { gameJustStarted = false; }
 
         // Character movement either in Running Mode or Exploring Mode
         if (inRunningMode) { playerRigidbody.velocity = new Vector2(runningMovementSpeed, playerRigidbody.velocity.y); }
@@ -67,7 +72,7 @@ public class Player : MonoBehaviour
         {
             canSwitchMode = false;
             inRunningMode = !inRunningMode;
-            Debug.Log("In Running Mode: " + inRunningMode);
+            //Debug.Log("In Running Mode: " + inRunningMode);
             StartCoroutine(SetModeSwitchTimer());
         }
     }
@@ -122,16 +127,27 @@ public class Player : MonoBehaviour
         feetCollider.enabled = true;
         spriteRenderer.enabled = true;
         playerRigidbody.bodyType = RigidbodyType2D.Dynamic;
+        inRunningMode = true;
         
         knockedOut = false;
 
 
-        Debug.Log("Remaining health: " + health);
+        //Debug.Log("Remaining health: " + health);
     }
 
     public bool isDead()
     {
         return (health <= 0);
+    }
+
+    public bool IsKnockedOut()
+    {
+        return knockedOut;
+    }
+
+    public bool HasPlayerWon()
+    {
+        return playerWon;
     }
 
     public int getHealth()
@@ -149,6 +165,10 @@ public class Player : MonoBehaviour
         else if (other.tag == "Checkpoint")
         {
             currentCheckpoint = other.gameObject;
+        }
+        else if (other.tag == "Endpoint")
+        {
+            playerWon = true;
         }
     }
 
