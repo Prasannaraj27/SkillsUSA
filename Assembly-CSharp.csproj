@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Tilemap\Assets\Tilemap\Brushes\Tint Brush Smooth\Scripts\TintTextureGenerator.cs" />
      <Compile Include="Assets\Scripts\CameraModeToggle.cs" />
+     <Compile Include="Assets\Scripts\Fullscreen.cs" />
      <Compile Include="Assets\Scripts\DoNotDestroy.cs" />
      <Compile Include="Assets\Tilemap\Assets\Tilemap\Tiles\Rule Tile\Scripts\RuleTile.cs" />
      <Compile Include="Assets\Scripts\Fog.cs" />

@@ -11,8 +11,10 @@ public class LevelSelection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Debug.Log(PlayerPrefs.GetInt("level"));
         //Debug.Log("Line 16:" + PlayerPrefs.GetInt("level"));
         int currentLevel  = PlayerPrefs.GetInt("level");
+        Debug.Log("Line 17:" + currentLevel);
         if(currentLevel == 0) 
         {
             currentLevel = 2;
@@ -63,7 +65,13 @@ public class LevelSelection : MonoBehaviour
         if (currentLevel == 4)
         {
             lvlButtons[2].interactable = true;
+            if(PlayerPrefs.HasKey("level")) {
+                PlayerPrefs.SetInt("level", 0);
+                PlayerPrefs.Save();
+            }
+            
         }
+        
         // add one more if statement and attribute theload next levl script to the finish line if a new level is added
 
     }
