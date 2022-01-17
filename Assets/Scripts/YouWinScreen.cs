@@ -45,6 +45,6 @@ public class YouWinScreen : MonoBehaviour
     public void Quit()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("StartScreen");
+        SceneManager.LoadScene("LevelSelect");
     }
 }

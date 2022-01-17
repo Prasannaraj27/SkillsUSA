@@ -61,9 +61,11 @@
      <Compile Include="Assets\Scripts\DoNotDestroy.cs" />
      <Compile Include="Assets\Tilemap\Assets\Tilemap\Tiles\Rule Tile\Scripts\RuleTile.cs" />
      <Compile Include="Assets\Scripts\Fog.cs" />
+     <Compile Include="Assets\Scripts\LoadNextLevel.cs" />
      <Compile Include="Assets\Scripts\SceneLoader.cs" />
      <Compile Include="Assets\Scripts\HealthIndicator.cs" />
      <Compile Include="Assets\Scripts\PlayerModeUI.cs" />
+     <Compile Include="Assets\Scripts\LevelSelection.cs" />
      <Compile Include="Assets\Tilemap\Assets\Tilemap\Tiles\Animated Tile\Scripts\AnimatedTile.cs" />
      <Compile Include="Assets\Scripts\YouDiedScreen.cs" />
      <Compile Include="Assets\Scripts\SoundManager.cs" />

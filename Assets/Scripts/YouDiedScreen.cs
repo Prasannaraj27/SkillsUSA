@@ -31,7 +31,7 @@ public class YouDiedScreen : MonoBehaviour
 
     public void Quit()
     {
-        SceneManager.LoadScene("StartScreen");
+        SceneManager.LoadScene("LevelSelect");
     }
 
 }

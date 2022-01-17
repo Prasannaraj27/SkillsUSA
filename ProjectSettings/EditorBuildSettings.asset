@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScreen.unity
     guid: 7cf78f1f17f5b1c4bbcfec666d06bb44
   - enabled: 1
+    path: Assets/Scenes/LevelSelect.unity
+    guid: e858d51ad06392a4c8ad7e13c76ca87f
+  - enabled: 1
     path: Assets/Scenes/Sandbox.unity
     guid: b2e8f61f9be17764a979d0fbc1c7523c
   - enabled: 1
@@ -17,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 2.unity
     guid: 56dd55e5184e7e045816a3bd1eec0c3f
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: 0ae7610dd5ba8ff4d925460058acf805
   m_configObjects: {}

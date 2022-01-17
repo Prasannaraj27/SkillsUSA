@@ -48,7 +48,7 @@ public class PauseScreen : MonoBehaviour
     {
         Time.timeScale = 1;
         gamePaused = false;
-        SceneManager.LoadScene("StartScreen");
+        SceneManager.LoadScene("LevelSelect");
     }
 
     public bool IsGamePaused()
