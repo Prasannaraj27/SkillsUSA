@@ -64,13 +64,24 @@ public class LevelSelection : MonoBehaviour
         }
         if (currentLevel == 4)
         {
-            lvlButtons[2].interactable = true;
-            if(PlayerPrefs.HasKey("level")) {
-                PlayerPrefs.SetInt("level", 0);
-                PlayerPrefs.Save();
-            }
-            
+        lvlButtons[2].interactable = true;
+
         }
+
+    }   
+    public void RestartButton()
+    {
+    
+        if(PlayerPrefs.HasKey("level")) 
+        {
+            PlayerPrefs.SetInt("level", 0);
+            PlayerPrefs.Save();
+            lvlButtons[1].interactable = false;
+            lvlButtons[2].interactable = false;
+        }
+
+            
+        
         
         // add one more if statement and attribute theload next levl script to the finish line if a new level is added
 
