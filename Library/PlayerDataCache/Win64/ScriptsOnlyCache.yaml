@@ -20,6 +20,7 @@ ScriptsOnlyBuild:
     - Player
     - PlayerModeUI
     - SandboxController
+    - SceneLoader
     - SoundManager
     - UnityEngine.RuleTile
     - YouDiedScreen
@@ -36,6 +37,7 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
+    - UnityEditor.Tilemaps.GridBrushEditor
     - UnityEditor.Tilemaps.GridPaintPaletteClipboard
     - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
@@ -111,9 +113,9 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 656}
+      Script: {instanceID: 658}
     - Class: 114
-      Script: {instanceID: 1488}
+      Script: {instanceID: 1490}
     - Class: 114
       Script: {instanceID: 1558}
     - Class: 114
@@ -222,9 +224,9 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 656}
+      Script: {instanceID: 658}
     - Class: 114
-      Script: {instanceID: 1488}
+      Script: {instanceID: 1490}
     - Class: 114
       Script: {instanceID: 1558}
     - Class: 114
@@ -319,7 +321,7 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1488}
+      Script: {instanceID: 1490}
     - Class: 114
       Script: {instanceID: 1558}
     - Class: 114
@@ -394,9 +396,9 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 656}
+      Script: {instanceID: 658}
     - Class: 114
-      Script: {instanceID: 1488}
+      Script: {instanceID: 1490}
     - Class: 114
       Script: {instanceID: 1558}
     - Class: 114
@@ -493,7 +495,7 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1488}
+      Script: {instanceID: 1490}
     - Class: 114
       Script: {instanceID: 1558}
     - Class: 114
@@ -520,6 +522,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3668}
     - Class: 114
       Script: {instanceID: 4148}
+    - Class: 114
+      Script: {instanceID: 4874}
     - Class: 114
       Script: {instanceID: 4968}
     - Class: 114
@@ -1502,4 +1506,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Sandbox.unity
   - Assets/Scenes/Level 1.unity
   - Assets/Scenes/Level 2.unity
-  playerPath: D:/Unity Projects/SkillsUSA Builds/build 1/Fog Runner.exe
+  playerPath: D:/Unity Projects/SkillsUSA Builds/game build/Fog Runner.exe

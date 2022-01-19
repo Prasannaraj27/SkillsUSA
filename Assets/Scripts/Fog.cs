@@ -13,7 +13,7 @@ public class Fog : MonoBehaviour
     [SerializeField] float movementSpeed = 1;
 
     bool settlingIn = false;
-    bool fogActive;
+    bool fogActive = true;
 
     // Start is called before the first frame update
     void Start()

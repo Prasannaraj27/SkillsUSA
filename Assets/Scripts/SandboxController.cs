@@ -14,6 +14,7 @@ public class SandboxController : MonoBehaviour
     {
         player = FindObjectOfType<Player>();
         fog = FindObjectOfType<Fog>();
+        fog.SetFogActive(false);
         //fog.gameObject.SetActive(false);
     }
 
