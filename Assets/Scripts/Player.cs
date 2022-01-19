@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject currentCheckpoint; // Important: this is the latest checkpoint the player passed
     [SerializeField] float waitTimeForRespawn = 1;
     [SerializeField] GameObject deathParticles;
+    [SerializeField] bool hasInfiniteHealth = false;
     bool canSwitchMode;
 
     bool playerWon = false;
@@ -42,6 +43,8 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        //if (hasInfiniteHealth) { health = 3; }
+
         if (health < 0) { health = 0; }
 
         if (knockedOut || isDead() || playerWon || FindObjectOfType<PauseScreen>().IsGamePaused()) { return; }
@@ -110,7 +113,7 @@ public class Player : MonoBehaviour
         playerRigidbody.bodyType = RigidbodyType2D.Static;
         bodyCollider.enabled = false;
         feetCollider.enabled = false;
-        health--;
+        if (!hasInfiniteHealth) health--;
         if (deathParticles)
         {
             var particle = Instantiate(deathParticles, new Vector3(transform.position.x, transform.position.y, -0.1f), Quaternion.identity) as GameObject;
@@ -153,6 +156,14 @@ public class Player : MonoBehaviour
     public int getHealth()
     {
         return health;
+    }
+
+    public IEnumerator HandleTeleport()
+    {
+        inRunningMode = false;
+        FindObjectOfType<CameraModeToggle>().SetFollowPlayer(true);
+        yield return new WaitForSeconds(1);
+        FindObjectOfType<CameraModeToggle>().SetFollowPlayer(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

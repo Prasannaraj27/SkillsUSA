@@ -60,11 +60,11 @@ public class LevelSelection : MonoBehaviour
         }*/
         if (currentLevel == 3)
         {
-            lvlButtons[1].interactable = true;
+            lvlButtons[0].interactable = true;
         }
         if (currentLevel == 4)
         {
-        lvlButtons[2].interactable = true;
+            lvlButtons[1].interactable = true;
 
         }
 
@@ -76,8 +76,8 @@ public class LevelSelection : MonoBehaviour
         {
             PlayerPrefs.SetInt("level", 0);
             PlayerPrefs.Save();
+            lvlButtons[0].interactable = true;
             lvlButtons[1].interactable = false;
-            lvlButtons[2].interactable = false;
         }
 
             

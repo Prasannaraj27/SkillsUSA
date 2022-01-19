@@ -13,7 +13,7 @@ public class Fog : MonoBehaviour
     [SerializeField] float movementSpeed = 1;
 
     bool settlingIn = false;
-
+    bool fogActive;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +25,13 @@ public class Fog : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!fogActive)
+        {
+            settlingIn = false;
+            transform.position = new Vector3(-25, 0, 0);
+            return;
+        }
+
         if (!player.GetInRunningMode() && !settlingIn && !player.gameJustStarted && !player.IsKnockedOut())
         {
             settlingIn = true;
@@ -44,5 +51,15 @@ public class Fog : MonoBehaviour
         yield return new WaitForSeconds(timeToSettleIn);
         fogRigidbody.velocity = new Vector2(movementSpeed, 0);
 
+    }
+
+    public void SetFogActive(bool tOf)
+    {
+        fogActive = tOf;
+    }
+
+    public bool IsFogActive()
+    {
+        return fogActive;
     }
 }

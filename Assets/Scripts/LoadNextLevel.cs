@@ -22,7 +22,7 @@ public class LoadNextLevel : MonoBehaviour
         {
             //Time.timeScale = 0;
             //canvas.enabled = true;
-            SceneManager.LoadScene(nextSceneLoad);
+            //SceneManager.LoadScene(nextSceneLoad);
             if (nextSceneLoad > PlayerPrefs.GetInt("level"))
             {
             

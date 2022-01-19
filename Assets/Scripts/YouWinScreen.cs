@@ -20,19 +20,19 @@ public class YouWinScreen : MonoBehaviour
     }
 
     // Update is called once per frame
-   /* void Update() 
+   void Update() 
     {
         if (FindObjectOfType<Player>().HasPlayerWon())
         {
 
-            //Time.timeScale = 0;
-            //canvas.enabled = true;
+            Time.timeScale = 0;
+            canvas.enabled = true;
             
 
 
             
         }
-    }*/
+    }
 
 
     public void Restart()

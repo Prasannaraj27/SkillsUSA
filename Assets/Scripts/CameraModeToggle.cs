@@ -6,6 +6,7 @@ using Cinemachine;
 public class CameraModeToggle : MonoBehaviour
 {
     CinemachineVirtualCamera virtualCamera;
+    bool followPlayer;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +17,7 @@ public class CameraModeToggle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (FindObjectOfType<Player>().GetInRunningMode())
+        if (FindObjectOfType<Player>().GetInRunningMode() || followPlayer)
         {
             virtualCamera.Follow = FindObjectOfType<Player>().transform;
         }
@@ -24,5 +25,10 @@ public class CameraModeToggle : MonoBehaviour
         {
             virtualCamera.Follow = null;
         }
+    }
+
+    public void SetFollowPlayer(bool tOf)
+    {
+        followPlayer = tOf;
     }
 }
